@@ -18,19 +18,19 @@ const Button: React.FC<ButtonProps> = ({
   disabled,
   ...rest
 }) => {
-  const baseStyles = 'font-medium rounded-lg transition ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-opacity-75';
+  const baseStyles = 'font-bold rounded-lg transition-all ease-in-out duration-300 focus:outline-none focus:ring-2 focus:ring-opacity-75 uppercase tracking-wider border-2';
   
   const variantStyles = {
-    primary: 'bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-indigo-500 disabled:bg-indigo-300',
-    secondary: 'bg-gray-200 text-gray-800 hover:bg-gray-300 focus:ring-gray-500 disabled:bg-gray-100 disabled:text-gray-400',
-    danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500 disabled:bg-red-300',
-    ghost: 'text-gray-600 hover:bg-gray-100 focus:ring-gray-300 disabled:text-gray-400',
+    primary: 'bg-cyan-500 border-cyan-500 text-gray-900 hover:bg-cyan-400 hover:shadow-neon-blue focus:ring-cyan-400 disabled:bg-gray-600 disabled:border-gray-600 disabled:text-gray-400 disabled:cursor-not-allowed disabled:shadow-none',
+    secondary: 'bg-transparent border-gray-400 text-gray-300 hover:bg-gray-700 hover:text-white hover:border-gray-200 focus:ring-gray-500 disabled:border-gray-700 disabled:text-gray-500',
+    danger: 'bg-pink-600 border-pink-600 text-white hover:bg-pink-500 hover:shadow-neon-pink focus:ring-pink-500 disabled:bg-gray-600 disabled:border-gray-600 disabled:text-gray-400 disabled:shadow-none',
+    ghost: 'border-transparent text-gray-400 hover:bg-gray-800 hover:text-cyan-400 focus:ring-gray-600 disabled:text-gray-600',
   };
 
   const sizeStyles = {
-    sm: 'px-3 py-1 text-sm',
-    md: 'px-4 py-2 text-base',
-    lg: 'px-5 py-3 text-lg',
+    sm: 'px-3 py-1 text-xs',
+    md: 'px-4 py-2 text-sm',
+    lg: 'px-6 py-3 text-base',
   };
 
   const combinedStyles = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className || ''}`;
