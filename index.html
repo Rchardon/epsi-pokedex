@@ -6,6 +6,40 @@
     <title>Pokémon Generator Lab</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Orbitron', 'sans-serif'],
+          },
+          boxShadow: {
+            'neon-blue': '0 0 5px theme("colors.cyan.400"), 0 0 10px theme("colors.cyan.500")',
+            'neon-pink': '0 0 5px theme("colors.pink.400"), 0 0 10px theme("colors.pink.500")',
+          }
+        }
+      }
+    }
+    </script>
+    <style>
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: #1f2937; /* bg-gray-800 */
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #374151; /* bg-gray-700 */
+        border-radius: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #4b5563; /* bg-gray-600 */
+      }
+    </style>
 <script type="importmap">
 {
   "imports": {
@@ -17,7 +51,7 @@
 }
 </script>
 </head>
-<body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen font-sans antialiased text-gray-800">
+<body class="bg-gradient-to-br from-gray-900 via-indigo-900 to-black min-h-screen font-sans antialiased text-gray-200">
     <div id="root"></div>
     <script type="module" src="./index.tsx"></script>
 </body>
