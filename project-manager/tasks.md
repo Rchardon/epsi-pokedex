@@ -27,3 +27,6 @@ This document tracks all development tasks for the Pokémon Generator applicatio
 - [ ] Collection must be stored and retrieved in the indexeddb of the visiting browser
 
 ## Planned
+
+- [ ] Add a Pokédex scoring system based on the number of owned and resold Pokémon, with a higher value for owned ones.
+- [ ] Rehault the full app to be a modern sleek dark neon stylish app with dynamic animations and particle effects.
